@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "පෘතුගීසීන් විසින් ශ්‍රී ලංකාවට හඳුන්වා දුන් පරිපාලන සහ නීති පද්ධතීන් විස්තර කරන්න. ඔවුන් පවතින දේශීය පරිපාලනය සමඟ කෙතරම් දුරට ඒකාබද්ධ වූවාද?",
+      "question_english": "Describe the administrative and legal systems introduced by the Portuguese in Sri Lanka. How much did they integrate with the existing native administration?",
+      "focus_area": "පරිපාලන වෙනස්කම්"
+    },
+    {
+      "id": 2,
+      "question": "වෙළඳ ක්‍රම සම්බන්ධයෙන් පෘතුගීසි, ලන්දේසි සහ බ්‍රිතාන්‍යයන් ශ්‍රී ලංකාවට හඳුන්වා දුන් ප්‍රධාන ආර්ථික වෙනස්කම් තුනක් හෝ හතරක් ගෙනහැර දක්වන්න.",
+      "question_english": "Outline three or four major economic changes that the Portuguese, Dutch, and British introduced to Sri Lanka in terms of trade systems.",
+      "focus_area": "ආර්ථික ක්‍රම"
+    },
+    {
+      "id": 3,
+      "question": "යටත්විජිත පාලන සමයේදී බ්‍රිතාන්‍ය මිෂනාරිවරුන්ගේ ආගමට හැරවීමේ උත්සාහයන් සිංහල සහ දෙමළ ජනතාවගේ ආගමික ජීවිතයට කළ බලපෑම් පැහැදිලි කරන්න.",
+      "question_english": "Explain the impacts of British missionary conversion efforts on the religious life of Sinhala and Tamil populations during colonial rule.",
+      "focus_area": "සමාජ/ආගමික බලපෑම්"
+    },
+    {
+      "id": 4,
+      "question": "බ්‍රිතාන්‍ය යටත්විජිතකරණයට එරෙහිව ඇති වූ 1818 ඌව වෙල්ලස්ස කැරැල්ල, එහි හේතූන්, ප්‍රධාන චරිත සහ ඓතිහාසික වැදගත්කම ඇතුළත්ව විස්තර කරන්න.",
+      "question_english": "Describe the Uva Rebellion of 1818 against British colonization, including its causes, key figures, and historical significance.",
+      "focus_area": "ප්‍රධාන සිදුවීම් සහ ප්‍රතිසංස්කරණ"
+    },
+    {
+      "id": 5,
+      "question": "ලන්දේසි පාලනයේ සිට බ්‍රිතාන්‍ය පාලනයට මාරුවීම සහ එය ශ්‍රී ලංකාවේ ආණ්ඩුක්‍රම ව්‍යවස්ථා රාමුවට, නීති පද්ධතිවලට සහ ඉඩම් හිමිකාරිත්ව ප්‍රතිපත්තිවලට කළ බලපෑම පැහැදිලි කරන්න. එහි ආසන්න සහ දිගුකාලීන ප්‍රතිවිපාක මොනවාද?",
+      "question_english": "Explain the transition from Dutch to British rule and its impacts on Sri Lanka's constitutional framework, legal systems, and land ownership policies. What were the immediate and long-term consequences?",
+      "focus_area": "පරිපාලන වෙනස්කම්"
+    }
+  ]
+}

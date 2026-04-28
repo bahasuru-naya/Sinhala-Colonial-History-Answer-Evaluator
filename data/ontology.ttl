@@ -1,0 +1,306 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix csh: <http://example.org/colonial-sri-lanka/> .
+
+# Ontology for Colonial Sri Lanka History
+# Covering Portuguese, Dutch, and British periods
+
+# ============== CLASSES ==============
+
+csh:ColonialPeriod rdf:type owl:Class ;
+    rdfs:label "Colonial Period"@en ;
+    rdfs:label "යටත් විජිත යුගය"@si ;
+    rdfs:comment "A period of colonial rule in Sri Lanka"@en .
+
+csh:ColonialPower rdf:type owl:Class ;
+    rdfs:label "Colonial Power"@en ;
+    rdfs:label "යටත් විජිත බලවතා"@si ;
+    rdfs:comment "A European power that colonized Sri Lanka"@en .
+
+csh:Ruler rdf:type owl:Class ;
+    rdfs:label "Ruler"@en ;
+    rdfs:label "පාලකයා"@si ;
+    rdfs:comment "A ruler or administrator during colonial period"@en .
+
+csh:Event rdf:type owl:Class ;
+    rdfs:label "Historical Event"@en ;
+    rdfs:label "ඓතිහාසික සිදුවීම"@si ;
+    rdfs:comment "A significant historical event during colonial rule"@en .
+
+csh:EconomicSystem rdf:type owl:Class ;
+    rdfs:label "Economic System"@en ;
+    rdfs:label "ආර්ථික ක්‍රමය"@si ;
+    rdfs:comment "An economic or trade system"@en .
+
+csh:AdministrativeSystem rdf:type owl:Class ;
+    rdfs:label "Administrative System"@en ;
+    rdfs:label "පරිපාලන ක්‍රමය"@si ;
+    rdfs:comment "An administrative or governance structure"@en .
+
+csh:Rebellion rdf:type owl:Class ;
+    rdfs:subClassOf csh:Event ;
+    rdfs:label "Rebellion"@en ;
+    rdfs:label "කැරැල්ල"@si ;
+    rdfs:comment "An armed uprising against colonial rule"@en .
+
+csh:ReligiousMovement rdf:type owl:Class ;
+    rdfs:label "Religious Movement"@en ;
+    rdfs:label "ආගමික ව්‍යාපාරය"@si ;
+    rdfs:comment "A religious or missionary activity"@en .
+
+csh:Commodity rdf:type owl:Class ;
+    rdfs:label "Commodity"@en ;
+    rdfs:label "වෙළඳ භාණ්ඩය"@si ;
+    rdfs:comment "A trade commodity"@en .
+
+csh:Territory rdf:type owl:Class ;
+    rdfs:label "Territory"@en ;
+    rdfs:label "භූමිය"@si ;
+    rdfs:comment "A geographical territory or region"@en .
+
+# ============== PROPERTIES ==============
+
+csh:colonizedBy rdf:type owl:ObjectProperty ;
+    rdfs:label "colonized by"@en ;
+    rdfs:comment "A territory colonized by a power"@en ;
+    rdfs:domain csh:Territory ;
+    rdfs:range csh:ColonialPower .
+
+csh:ruledBy rdf:type owl:ObjectProperty ;
+    rdfs:label "ruled by"@en ;
+    rdfs:comment "A period ruled by a ruler"@en ;
+    rdfs:domain csh:ColonialPeriod ;
+    rdfs:range csh:Ruler .
+
+csh:introducedsSystem rdf:type owl:ObjectProperty ;
+    rdfs:label "introduces system"@en ;
+    rdfs:comment "A colonial power introduces an administrative/economic system"@en ;
+    rdfs:domain csh:ColonialPower ;
+    rdfs:range csh:AdministrativeSystem, csh:EconomicSystem .
+
+csh:tradedCommodity rdf:type owl:ObjectProperty ;
+    rdfs:label "traded commodity"@en ;
+    rdfs:comment "A commodity traded during a period"@en ;
+    rdfs:domain csh:EconomicSystem ;
+    rdfs:range csh:Commodity .
+
+csh:occurredDuring rdf:type owl:ObjectProperty ;
+    rdfs:label "occurred during"@en ;
+    rdfs:comment "An event occurred during a colonial period"@en ;
+    rdfs:domain csh:Event ;
+    rdfs:range csh:ColonialPeriod .
+
+csh:againstPower rdf:type owl:ObjectProperty ;
+    rdfs:label "against power"@en ;
+    rdfs:comment "A rebellion against a colonial power"@en ;
+    rdfs:domain csh:Rebellion ;
+    rdfs:range csh:ColonialPower .
+
+csh:ledBy rdf:type owl:ObjectProperty ;
+    rdfs:label "led by"@en ;
+    rdfs:comment "An event led by a person"@en ;
+    rdfs:domain csh:Event ;
+    rdfs:range csh:Ruler .
+
+csh:startYear rdf:type owl:DatatypeProperty ;
+    rdfs:label "start year"@en ;
+    rdfs:range xsd:integer .
+
+csh:endYear rdf:type owl:DatatypeProperty ;
+    rdfs:label "end year"@en ;
+    rdfs:range xsd:integer .
+
+csh:description rdf:type owl:DatatypeProperty ;
+    rdfs:label "description"@en ;
+    rdfs:range xsd:string .
+
+csh:impactType rdf:type owl:DatatypeProperty ;
+    rdfs:label "impact type"@en ;
+    rdfs:range xsd:string .
+
+# ============== INSTANCES ==============
+
+# Colonial Periods
+csh:PortuguesePeriod rdf:type csh:ColonialPeriod ;
+    rdfs:label "Portuguese Period"@en ;
+    rdfs:label "පෘතුගීසි යුගය"@si ;
+    csh:startYear 1505 ;
+    csh:endYear 1658 ;
+    csh:description "Portuguese colonial rule in Sri Lanka from 1505 to 1658"@en .
+
+csh:DutchPeriod rdf:type csh:ColonialPeriod ;
+    rdfs:label "Dutch Period"@en ;
+    rdfs:label "ලන්දේසි යුගය"@si ;
+    csh:startYear 1656 ;
+    csh:endYear 1796 ;
+    csh:description "Dutch colonial rule in Sri Lanka from 1656 to 1796"@en .
+
+csh:BritishPeriod rdf:type csh:ColonialPeriod ;
+    rdfs:label "British Period"@en ;
+    rdfs:label "බ්‍රිතාන්‍ය යුගය"@si ;
+    csh:startYear 1796 ;
+    csh:endYear 1948 ;
+    csh:description "British colonial rule in Sri Lanka from 1796 to 1948"@en .
+
+# Colonial Powers
+csh:Portugal rdf:type csh:ColonialPower ;
+    rdfs:label "Portugal"@en ;
+    rdfs:label "පෘතුගාලය"@si ;
+    rdfs:label "පෘතුගීසි"@si ;
+    csh:description "Portuguese Empire"@en .
+
+csh:Netherlands rdf:type csh:ColonialPower ;
+    rdfs:label "Netherlands"@en ;
+    rdfs:label "නෙදර්ලන්තය"@si ;
+    rdfs:label "ලන්දේසි"@si ;
+    csh:description "Dutch Empire"@en .
+
+csh:Britain rdf:type csh:ColonialPower ;
+    rdfs:label "Britain"@en ;
+    rdfs:label "බ්‍රිතාන්‍යය"@si ;
+    rdfs:label "බ්‍රිතාන්‍ය"@si ;
+    csh:description "British Empire"@en .
+
+# Key Rulers
+csh:FranciscoDeAlmeida rdf:type csh:Ruler ;
+    rdfs:label "Francisco de Almeida"@en ;
+    rdfs:label "ෆ්‍රැන්සිස්කෝ ද අල්මේදා"@si ;
+    csh:description "First Portuguese Governor of Sri Lanka (1505-1509)"@en ;
+    csh:startYear 1505 ;
+    csh:endYear 1509 .
+
+csh:KeppetipolaDisawe rdf:type csh:Ruler ;
+    rdfs:label "Keppetipola Disawe"@en ;
+    rdfs:label "කැප්පෙටිපොළ දිසාවේ"@si ;
+    csh:description "Leader of Uva Rebellion against British rule (1818)"@en .
+
+csh:SirRobertBrownrigg rdf:type csh:Ruler ;
+    rdfs:label "Sir Robert Brownrigg"@en ;
+    rdfs:label "රොබට් බ්‍රවුන්රිග්"@si ;
+    csh:description "British Governor who suppressed Uva Rebellion (1818-1824)"@en .
+
+# Administrative Systems
+csh:PortugueseAdministration rdf:type csh:AdministrativeSystem ;
+    rdfs:label "Portuguese Administration"@en ;
+    rdfs:label "පෘතුගීසි පරිපාලනය"@si ;
+    csh:description "Hierarchical Portuguese administration with Captaincies and military governors"@en ;
+    csh:impactType "Military and hierarchical"@en .
+
+csh:DutchVOCSystem rdf:type csh:AdministrativeSystem ;
+    rdfs:label "Dutch VOC System"@en ;
+    rdfs:label "ලන්දේසි VOC ක්‍රමය"@si ;
+    csh:description "Dutch East India Company (VOC) trading post administration"@en ;
+    csh:impactType "Merchant-driven governance"@en .
+
+csh:BritishColonialAdministration rdf:type csh:AdministrativeSystem ;
+    rdfs:label "British Colonial Administration"@en ;
+    rdfs:label "බ්‍රිතාන්‍ය යටත් විජිත පරිපාලනය"@si ;
+    csh:description "British centralized colonial administration with Crown governance"@en ;
+    csh:impactType "Centralized bureaucratic"@en .
+
+# Economic Systems
+csh:PortugueseSpiceTrade rdf:type csh:EconomicSystem ;
+    rdfs:label "Portuguese Spice Trade Monopoly"@en ;
+    rdfs:label "පෘතුගීසි කුළුබඩු වෙළඳ ඒකාධිකාරය"@si ;
+    csh:description "State monopoly on spice and cinnamon trade"@en ;
+    csh:tradedCommodity csh:Cinnamon, csh:Spices .
+
+csh:DutchTradeNetwork rdf:type csh:EconomicSystem ;
+    rdfs:label "Dutch Trade Network"@en ;
+    rdfs:label "ලන්දේසි වෙළඳ ජාලය"@si ;
+    csh:description "VOC-based trade networks with warehouse systems"@en ;
+    csh:tradedCommodity csh:Cinnamon, csh:Spices, csh:Textiles .
+
+csh:BritishPlantationEconomy rdf:type csh:EconomicSystem ;
+    rdfs:label "British Plantation Economy"@en ;
+    rdfs:label "බ්‍රිතාන්‍ය වැවිලි ආර්ථිකය"@si ;
+    csh:description "Large-scale plantation agriculture for export"@en ;
+    csh:tradedCommodity csh:Coffee, csh:Tea, csh:Rubber .
+
+# Commodities
+csh:Cinnamon rdf:type csh:Commodity ;
+    rdfs:label "Cinnamon"@en ;
+    rdfs:label "කුරුඳු"@si ;
+    csh:description "Spice highly valued in European markets"@en .
+
+csh:Spices rdf:type csh:Commodity ;
+    rdfs:label "Spices"@en ;
+    rdfs:label "කුළුබඩු"@si ;
+    csh:description "Various spices traded during colonial period"@en .
+
+csh:Textiles rdf:type csh:Commodity ;
+    rdfs:label "Textiles"@en ;
+    rdfs:label "රෙදිපිළි"@si ;
+    csh:description "Cotton and silk textiles"@en .
+
+csh:Coffee rdf:type csh:Commodity ;
+    rdfs:label "Coffee"@en ;
+    rdfs:label "කෝපි"@si ;
+    csh:description "Coffee plantation crop"@en .
+
+csh:Tea rdf:type csh:Commodity ;
+    rdfs:label "Tea"@en ;
+    rdfs:label "තේ"@si ;
+    csh:description "Tea plantation crop"@en .
+
+csh:Rubber rdf:type csh:Commodity ;
+    rdfs:label "Rubber"@en ;
+    rdfs:label "රබර්"@si ;
+    csh:description "Rubber plantation crop"@en .
+
+# Major Events
+csh:PortugueseConquest rdf:type csh:Event ;
+    rdfs:label "Portuguese Conquest"@en ;
+    rdfs:label "පෘතුගීසි ආක්‍රමණය"@si ;
+    csh:startYear 1505 ;
+    csh:endYear 1658 ;
+    csh:description "Portuguese military expansion and colonization of Sri Lanka"@en ;
+    csh:occurredDuring csh:PortuguesePeriod ;
+    csh:ledBy csh:FranciscoDeAlmeida .
+
+csh:UvaRebellion rdf:type csh:Rebellion ;
+    rdfs:label "Uva Rebellion"@en ;
+    rdfs:label "ඌව කැරැල්ල"@si ;
+    rdfs:label "වෙල්ලස්ස කැරැල්ල"@si ;
+    csh:startYear 1818 ;
+    csh:endYear 1818 ;
+    csh:description "Armed uprising against British plantation expansion led by Keppetipola Disawe"@en ;
+    csh:occurredDuring csh:BritishPeriod ;
+    csh:ledBy csh:KeppetipolaDisawe ;
+    csh:againstPower csh:Britain .
+
+csh:DutchBritishTransition rdf:type csh:Event ;
+    rdfs:label "Dutch-British Transition"@en ;
+    rdfs:label "ලන්දේසි-බ්‍රිතාන්‍ය සංක්‍රමණය"@si ;
+    csh:startYear 1796 ;
+    csh:endYear 1815 ;
+    csh:description "Transfer of power from Dutch to British colonial rule"@en .
+
+# Religious Movements
+csh:PortugueseMissionaries rdf:type csh:ReligiousMovement ;
+    rdfs:label "Portuguese Catholic Missionaries"@en ;
+    rdfs:label "පෘතුගීසි කතෝලික මිෂනාරිවරු"@si ;
+    csh:description "Catholic missionary activities during Portuguese rule"@en ;
+    csh:impactType "Religious conversion and cultural disruption"@en .
+
+csh:BritishMissionaries rdf:type csh:ReligiousMovement ;
+    rdfs:label "British Protestant Missionaries"@en ;
+    rdfs:label "බ්‍රිතාන්‍ය රෙපරමාදු මිෂනාරිවරු"@si ;
+    csh:description "Protestant missionary activities during British rule"@en ;
+    csh:impactType "Christian education and religious pluralism"@en .
+
+# Territories
+csh:SriLanka rdf:type csh:Territory ;
+    rdfs:label "Sri Lanka"@en ;
+    rdfs:label "ශ්‍රී ලංකාව"@si ;
+    csh:colonizedBy csh:Portugal, csh:Netherlands, csh:Britain ;
+    csh:description "Island nation colonized by three European powers"@en .
+
+# Relations
+csh:PortuguesePeriod csh:ruledBy csh:FranciscoDeAlmeida .
+csh:BritishPeriod csh:ruledBy csh:SirRobertBrownrigg .
+csh:Portugal csh:introducedsSystem csh:PortugueseAdministration, csh:PortugueseSpiceTrade .
+csh:Netherlands csh:introducedsSystem csh:DutchVOCSystem, csh:DutchTradeNetwork .
+csh:Britain csh:introducedsSystem csh:BritishColonialAdministration, csh:BritishPlantationEconomy .
