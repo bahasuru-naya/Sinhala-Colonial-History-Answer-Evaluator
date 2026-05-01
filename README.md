@@ -1,6 +1,11 @@
 # 🇱🇰 Sinhala Colonial History Answer Evaluator
 
 An advanced, AI-powered system designed to automatically evaluate and score student answers on Sri Lankan Colonial History (Portuguese, Dutch, and British periods) in the Sinhala language.
+<img width="1915" height="1078" alt="1" src="https://github.com/user-attachments/assets/8b841cb7-3774-4d87-9cd0-77c1f73726ee" />
+<img width="1918" height="1078" alt="2" src="https://github.com/user-attachments/assets/703db638-1cf4-4f87-af19-1f7c2653e566" />
+<img width="1918" height="1078" alt="3" src="https://github.com/user-attachments/assets/ac56937f-f6a4-4df8-a9c1-0682f3d34f5f" />
+<img width="1918" height="1078" alt="4" src="https://github.com/user-attachments/assets/52999790-be11-48ad-8bc5-065ac2e3e12c" />
+<img width="1918" height="1078" alt="5" src="https://github.com/user-attachments/assets/cf1d37ba-5769-4716-8b8d-5ca98ccc64d9" />
 
 ## 🌟 Overview
 
