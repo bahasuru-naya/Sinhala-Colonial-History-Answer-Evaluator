@@ -3,8 +3,6 @@ streamlit==1.32.0
 
 # LLM & Local Inference
 ollama==0.1.7
-langchain==0.1.12
-langchain-community==0.0.28
 
 # Vector Database (RAG)
 chromadb==0.4.24
@@ -13,9 +11,6 @@ pypdf==4.1.0
 
 # Ontology & Knowledge Representation
 rdflib==7.0.0
-
-# Agentic Workflow
-langgraph==0.0.26
 
 # Utilities
 pandas==2.2.1

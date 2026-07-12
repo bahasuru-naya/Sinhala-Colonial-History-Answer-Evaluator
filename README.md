@@ -25,7 +25,7 @@ The **Sinhala Colonial History Answer Evaluator** is a sophisticated educational
 The system follows a multi-layered agentic approach:
 
 1.  **UI Layer:** Built with Streamlit, providing an interactive dashboard for students and educators.
-2.  **Orchestration Layer:** Managed by `AnswerEvaluationOrchestrator` using LangGraph to coordinate between retrieval and evaluation.
+2.  **Orchestration Layer:** Managed by `AnswerEvaluationOrchestrator` to coordinate retrieval and evaluation workflows.
 3.  **Knowledge Layer:**
     -   **RAG Pipeline:** Uses ChromaDB for vector-based retrieval of historical text chunks.
     -   **Ontology Handler:** Uses RDFLib to query a structured Knowledge Graph of colonial entities and relationships.
@@ -92,9 +92,8 @@ streamlit run ui/app.py
 
 - **Framework:** Streamlit
 - **LLM Engine:** Ollama (Gemma)
-- **RAG:** LangChain, ChromaDB, Sentence-Transformers
+- **RAG:** ChromaDB, Sentence-Transformers
 - **Ontology:** RDFLib (Turtle format)
-- **Logic:** LangGraph
 - **Language:** Python
 
 ---
